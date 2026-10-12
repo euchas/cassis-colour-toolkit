@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "cassis-colour-toolkit: reader, colour parameters and RGB composites for CaSSIS cubes"
+version: 0.1.0
+date-released: 2026-10-12
+license: MIT
+repository-code: "https://github.com/euchas/cassis-colour-toolkit"
+url: "https://github.com/euchas/cassis-colour-toolkit"
+authors:
+  - family-names: Valantinas
+    given-names: Adomas
+    orcid: "https://orcid.org/0000-0001-9995-3335"
+    affiliation: "University of Cambridge"
+keywords:
+  - Mars
+  - CaSSIS
+  - ExoMars
+  - Trace Gas Orbiter
+  - colour imaging
+  - spectral parameters
+  - band depth
+  - ISIS3
+abstract: >-
+  Python tools for the four-filter colour cubes of CaSSIS, the Colour and
+  Stereo Surface Imaging System on the ExoMars Trace Gas Orbiter: an ISIS3
+  cube reader with filter identification, decimated reads and a download
+  completeness check; thirty colour and spectral-shape parameters (band
+  ratios, continuum-removed band depths, spectral slopes, centred log-ratios
+  and simplex angles, curvature, spectral moments, Legendre coefficients,
+  entropy); four RGB composites; and a command line tool.
