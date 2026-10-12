@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cassis-colour-toolkit"
+version = "0.1.0"
+description = "Read CaSSIS (ExoMars Trace Gas Orbiter) colour cubes, compute colour parameters and build RGB composites"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Adomas Valantinas" }]
+keywords = ["Mars", "CaSSIS", "ExoMars", "Trace Gas Orbiter", "colour", "spectral parameters",
+            "band depth", "ISIS3", "remote sensing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = [
+    "numpy>=1.23",
+    "rasterio>=1.3",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.6"]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/euchas/cassis-colour-toolkit"
+Repository = "https://github.com/euchas/cassis-colour-toolkit"
+Issues = "https://github.com/euchas/cassis-colour-toolkit/issues"
+Changelog = "https://github.com/euchas/cassis-colour-toolkit/blob/main/CHANGELOG.md"
+
+[project.scripts]
+cassis-colour = "cassis_colour.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
